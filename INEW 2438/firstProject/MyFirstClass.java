@@ -1,4 +1,5 @@
 package firstProject;
+
 public class MyFirstClass {
      public int aInt;
 
