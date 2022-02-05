@@ -43,10 +43,14 @@ public class DrawShapes {
                }
           }
           switch (n) {
-               case 5, 11, 15:
+               case 5:
+               case 11:
+               case 15:
                     drawSquare(n);
                     break;
-               case 3, 9, 17:
+               case 3:
+               case 9:
+               case 17:
                     drawBox(n);
                     break;
                default:
