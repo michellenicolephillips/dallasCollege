@@ -2,27 +2,6 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.lang.String;
 import java.lang.Character;
-/*
-For any application, a user’s phone number need to be typed in. Some application ask the user type in in a specific format, otherwise the system will not accept the data. This project will solve the problem. 
-You will need create a program to identify any format phone number user input and convert to “(123)123-3242” as the standard format.
-1. identify the user input has 10 digits.
-2. remove all the non-digit characters.
-3. format the phone number to the “(123)123-3224” form.
-4. ask user to verify the number.
-Note: you might use the following methods: In Class Character: isDigit(char ch) , isLetter(char ch) ; In Class String: charAt(int index) , substring(int beginIndex ), substring( int beginIndex, int endIndex) , toCharArray() , trim(); in class StringBuilder: append(char ch), toString();
-Testing data:
-1. user input 1245678901 then the output should be "(124)567-8901"
-2. user input 124-567-8901 then the output should be "(124)567-8901"
-3. user input (124)-567-8901 then the output should be "(124)567-8901"
-4. user input 1(245)678901 then the output should be "(124)567-8901"
-5. user input 124567891901 then the output should be "invalid numbers"
-6. user input 12489901 then the output should be "invalid numbers"
-7. user input 124 56 78901 then the output should be "(124)567-8901"
-8. user input 124w56 78a901 then the output should be "(124)567-8901"
-9. user input 124abc8901 then the output should be "invalid numbers"
-10. user input 1-800-245-6782 then the output should be "(800)245-6782"
-Please submit only .java files.
- */
 
 public class phoneNumber {
      static String userInput;
