@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.lang.String;
 import java.lang.Character;
 
-public class phoneNumber {
+public class PhoneNumber {
      static String userInput;
      static String userPhoneNumber = "";
      static String formattedNumber = "(";

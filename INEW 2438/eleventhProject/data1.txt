@@ -1,0 +1,17 @@
+Laffy Taffy,0.75,A,1
+Bubble Gum,0.75,A,2
+Twizzlers Licorice Candy,0.75,A,3
+Necco Wafers Candy,0.75,A,4
+Hershey's,1.25,A,5
+M&M,1.25,A,6
+SNICKERs,1.25,A,7
+Snickerdoodles,1.5,B,1
+Chocolate chip cookie,1.5,B,2
+Oatmeal Raisin Cookies,1.5,B,3
+Gingersnaps,1.5,B,4
+Shortbread,1.5,B,5
+Lay's,1.5,C,1
+Sun chips,1.5,C,2
+Cheetos,1.5,C,3
+Doritos,1.5,C,4
+Smart Food,1.5,C,5
