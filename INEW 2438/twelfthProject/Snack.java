@@ -38,7 +38,6 @@ public class Snack {
           char layer = values.get(2).charAt(0); 
           int slot = Integer.parseInt(values.get(3));
           Snack s = new Snack (name, price, layer, slot);
-        
           return s;
      }
 }

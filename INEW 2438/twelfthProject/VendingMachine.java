@@ -1,32 +1,34 @@
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.FileWriter;
 
 public class VendingMachine {
 
-     private static Snack [] loadSnacks() {
-          Snack[] snacks = new Snack[17];
+     private static ArrayList<Snack> loadSnacks() {
+          ArrayList<Snack> snacks = new ArrayList<Snack>(17);
           try(Scanner sc = new Scanner(new File("data1.txt"))) {
-               for (int i = 0; i < snacks.length; i++) {
+               for (int i = 0; i < 17; i++) {
                     String data =sc.nextLine();
-                    snacks[i] = Snack.parseStringToSnack(data);
+                    snacks.add(i,Snack.parseStringToSnack(data));
                }
           } catch (FileNotFoundException e) {
                System.out.println("An error occured.");
           }
+          System.out.print(snacks.toString());
           return snacks;
      }
 
-     private static String getCode(Snack[] snacks) {
+     private static String getCode(ArrayList<Snack> snacks) {
           Scanner sc = new Scanner(System.in);
-          for (int i = 0; i < snacks.length; i++) {
+          for (int i = 0; i < snacks.size(); i++) {
                if (i % 5 == 0) {
                     System.out.println();
                }
-               System.out.print(snacks[i].getLayer());
-               System.out.print(snacks[i].getSlot());
+               System.out.print(snacks.get(i).getLayer());
+               System.out.print(snacks.get(i).getSlot());
                System.out.print(" ");
           }
           System.out.println();
@@ -66,13 +68,13 @@ public class VendingMachine {
           return bill;
      }
 
-     private static Snack getSnackByCode(Snack[] snacks, String snackCode) {
+     private static Snack getSnackByCode(ArrayList<Snack> snacks, String snackCode) {
           char[] code = snackCode.toCharArray();
-          for (int i = 0; i < snacks.length; i++) {
-               if (snacks[i].getLayer() == code[0]) {
+          for (int i = 0; i < snacks.size(); i++) {
+               if (snacks.get(i).getLayer() == code[0]) {
                     int slot = code[1] - '0';
-                    if (snacks[i].getSlot()== slot) {
-                         return snacks[i];
+                    if (snacks.get(i).getSlot()== slot) {
+                         return snacks.get(i);
                     }
                }
           }
@@ -114,13 +116,13 @@ public class VendingMachine {
           }
      }
      public static void main (String[] args) {  
-          while (true) {
-               Snack[] snacks = loadSnacks();
-               String snackCode = getCode(snacks);
+          while (true) { 
+               ArrayList<Snack> snacksToChoose = loadSnacks();
+               String snackCode = getCode(snacksToChoose);
                double payment = getMoney();
-               Snack s = getSnackByCode(snacks, snackCode);
+               Snack s = getSnackByCode(snacksToChoose, snackCode);
                processSale(s, payment);
                saveSale(s);
-          }
+          } 
      }
 }
