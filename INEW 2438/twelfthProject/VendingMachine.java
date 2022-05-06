@@ -8,7 +8,7 @@ import java.io.FileWriter;
 public class VendingMachine {
 
      private static ArrayList<Snack> loadSnacks() {
-          ArrayList<Snack> snacks = new ArrayList<Snack>(17);
+          ArrayList<Snack> snacks = new ArrayList<Snack>();
           try(Scanner sc = new Scanner(new File("data1.txt"))) {
                for (int i = 0; i < 17; i++) {
                     String data =sc.nextLine();
@@ -17,7 +17,6 @@ public class VendingMachine {
           } catch (FileNotFoundException e) {
                System.out.println("An error occured.");
           }
-          System.out.print(snacks.toString());
           return snacks;
      }
 
