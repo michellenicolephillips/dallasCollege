@@ -1,0 +1,59 @@
+@font-face {
+     font-family: ShadowsIntoLight;
+     src: url('../css/ShadowsIntoLight-Regular.ttf');
+}
+
+body {
+     font-family: Arial, Helvetica, sans-serif;
+     background-color: #F2F2F2;
+}
+header {
+     font-family: ShadowsIntoLight;
+     font-size: 5em;
+     background-color: #261912;
+     color: #77A690;
+}
+main {
+     background-color: #F2F2F2;
+}
+p {
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 1em;
+}
+h1, h2, h3, h4, h5, h6 {
+     font-family: Arial, Helvetica, sans-serif;
+     color: #261912;
+}
+h1 {
+     font-size: 3em;
+}
+h2 {
+     font-size: 2.5em;
+}
+h3 {
+     font-size: 2em;
+}
+h4 {
+     font-size: 1.5em;
+}
+h5 {
+     font-size: 1.25em;
+}
+h6 {
+     font-size: .75em;
+} 
+.blog-posts {
+     color: #261912;
+     background-image: linear-gradient(to right, #53735E, #77A690);
+}
+#footer {
+     text-align: center;
+     color: #F2F2F2;
+     background-image: url(../images/greenleaves.jpg);
+}
+a:link {
+     color: #733D29;
+}
+a:visited {
+     color: #261912;
+}
