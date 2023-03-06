@@ -8,10 +8,14 @@ body {
      background-color: #F2F2F2;
 }
 header {
-     font-family: ShadowsIntoLight;
-     font-size: 5em;
+
      background-color: #261912;
      color: #77A690;
+}
+header p {
+     font-family: ShadowsIntoLight;
+     font-size: 5em;
+     text-align: center;
 }
 main {
      background-color: #F2F2F2;
@@ -43,6 +47,7 @@ h6 {
      font-size: .75em;
 } 
 .blog-posts {
+     margin: auto;
      color: #261912;
      background-image: linear-gradient(to right, #53735E, #77A690);
 }
@@ -56,4 +61,16 @@ a:link {
 }
 a:visited {
      color: #261912;
+}
+#michelle-pic {
+     width: 20%;
+}
+#colorPalette {
+     width: 40%;
+}
+figcaption{
+     width: 40%;
+     background-color: #261912;
+     color: #F2F2F2;
+
 }

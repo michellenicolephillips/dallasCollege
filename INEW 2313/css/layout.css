@@ -1,0 +1,24 @@
+* {
+     box-sizing: border-box;
+}
+body p, body h1{
+     margin: 20px;
+}
+.blog-posts {
+     border: #261912 solid 3px;
+     margin: 20px;
+     padding: 10px;
+}
+#michelle {
+     width: 30%;
+     border-radius: 50%;
+}
+header {
+     height: 200px;
+}
+.logo {
+     max-width: 50%;
+     width: 200px;
+     text-align: right;
+     position: absolute;
+}
