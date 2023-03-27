@@ -6,8 +6,8 @@ body p, body h1{
 }
 .blog-posts {
      border: #261912 solid 3px;
-     margin: 20px;
      padding: 10px;
+     margin-bottom: 20px;
 }
 #michelle {
      width: 30%;

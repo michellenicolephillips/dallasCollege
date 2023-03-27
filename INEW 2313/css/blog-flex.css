@@ -1,0 +1,14 @@
+article{
+     display: flex;
+     align-content: space-around;
+     flex-direction: column;
+}
+.blog-text {    
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     align-items: stretch;
+}
+.blog-image {
+     flex-flow: row wrap;
+}
