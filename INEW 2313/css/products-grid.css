@@ -1,0 +1,18 @@
+.blog-posts {
+     display: grid;
+     grid-template-columns: 1fr;
+     grid-template-rows: auto auto auto;
+     justify-items: center;
+     justify-content: center;
+     align-items: center;
+     align-content: center;
+     grid-auto-flow: row dense;
+   }
+   
+   .blog-text {
+     grid-row: 2 / 3;
+   }
+   
+   .blog-image {
+     grid-row: 3 / 4;
+   }
