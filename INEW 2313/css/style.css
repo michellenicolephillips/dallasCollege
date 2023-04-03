@@ -11,12 +11,15 @@ header {
 
      background-color: #261912;
      color: #77A690;
+     padding: 20px;
+     display: flex;
+     align-items: center;
 }
 header p {
      font-family: ShadowsIntoLight;
-     font-size: 5em;
-     text-align: center;
+     font-size: 4em;
 }
+
 main {
      background-color: #F2F2F2;
 }
@@ -56,11 +59,15 @@ article {
      color: #261912;
      background-image: linear-gradient(to right, #53735E, #77A690);
 }
-#footer {
+.footer {
      text-align: center;
      color: #F2F2F2;
      background-image: url(../images/greenleaves.jpg);
 }
+.footerLink a:visited{
+     color: #F2F2F2;
+
+} 
 a:link {
      color: #733D29;
 }
@@ -80,5 +87,21 @@ figcaption{
 
 }
 .blog-image {
-     width: 50%;
+     width: 80%;
+}
+
+@media only screen and (max-width: 800) {
+     header p {
+          font-family: ShadowsIntoLight;
+          font-size: 3em;
+     }
+   }
+
+@media only screen and (max-width: 600px) {
+     header p, .blog-image, figcaption {
+          display: none;
+     }
+     main {
+          margin: 10px;
+     }
 }

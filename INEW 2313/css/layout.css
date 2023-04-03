@@ -17,8 +17,34 @@ header {
      height: 200px;
 }
 .logo {
-     max-width: 50%;
      width: 200px;
-     text-align: right;
-     position: absolute;
-}
+     height: auto;
+     margin-right: 20px;
+   }
+   nav {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background-color: #77A690;
+     padding: 10px;
+   }
+   nav ul {
+     display: flex;
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+   }
+   
+   nav ul li {
+     margin-right: 20px;
+   }
+   
+   a {
+     color: #333;
+     text-decoration: none;
+     font-weight: bold;
+     font-size: 18px;
+   }
+   main {
+        margin: 50px;
+   }
