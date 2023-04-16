@@ -2,6 +2,34 @@
      --navy: #091834;
      --lightBlue: #1258DC;
      --seafoamGreen: #448D76;
-     --lime: #448D76;
-     --cream: #E7F7D4
+     --lime: #7FBD32;
+     --cream: #E7F7D4;
 }
+.background {
+     background-color: var(--cream);
+}
+.accent1 {
+     background-color: var(--navy);
+}
+.accent1Text {
+     color: var(--navy);
+}
+.accent2 {
+     background-color: var(--lime);
+}
+.accent2Text {
+     color: var(--lime);
+}
+.accent3Text {
+color: var(--seafoamGreen);
+}
+a:link {
+     color: var(--navy);
+}
+a:visited {
+     color: var(--lightBlue);
+}
+nav ul li:hover {
+     background-color: var(--cream);
+     transition: background-color 1s;
+ }

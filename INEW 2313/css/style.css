@@ -2,15 +2,14 @@
      font-family: ShadowsIntoLight;
      src: url('../css/ShadowsIntoLight-Regular.ttf');
 }
-
+html {
+     margin: 0;
+}
 body {
+     margin: 0;
      font-family: Arial, Helvetica, sans-serif;
-     background-color: #F2F2F2;
 }
 header {
-
-     background-color: #261912;
-     color: #77A690;
      padding: 20px;
      display: flex;
      align-items: center;
@@ -20,16 +19,12 @@ header p {
      font-size: 4em;
 }
 
-main {
-     background-color: #F2F2F2;
-}
 p {
      font-family: Arial, Helvetica, sans-serif;
      font-size: 1em;
 }
 h1, h2, h3, h4, h5, h6 {
      font-family: Arial, Helvetica, sans-serif;
-     color: #261912;
 }
 h1 {
      font-size: 3em;
@@ -56,23 +51,12 @@ article {
 }
 .blog-posts {
      margin: auto;
-     color: #261912;
      background-image: linear-gradient(to right, #53735E, #77A690);
 }
 .footer {
+     margin: 0;
      text-align: center;
-     color: #F2F2F2;
      background-image: url(../images/greenleaves.jpg);
-}
-.footerLink a:visited{
-     color: #F2F2F2;
-
-} 
-a:link {
-     color: #733D29;
-}
-a:visited {
-     color: #261912;
 }
 #michelle-pic {
      width: 20%;
@@ -82,9 +66,6 @@ a:visited {
 }
 figcaption{
      width: 40%;
-     background-color: #261912;
-     color: #F2F2F2;
-
 }
 .blog-image {
      width: 80%;
@@ -105,12 +86,13 @@ figcaption{
           margin: 10px;
      }
 }
-nav ul li:hover {
-     background-color: white;
-     transition: background-color 2s;
+nav {
+     background-color: #77A690;
 }
+
+
 #michelle {
-     transform: rotate(.08turn);
+     transform: rotate(.05turn);
 }
 
 header p {

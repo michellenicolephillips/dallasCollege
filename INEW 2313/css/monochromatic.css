@@ -1,0 +1,46 @@
+:root {
+    --darkGreen: #093426;
+    --mediumGreen: #23483C;
+    --seafoamGreen: #448D76;
+    --lightSeafoam: #79BEA8;
+    --cream: #E7F3EF;
+}
+.background {
+    background-color: var(--seafoamGreen);
+}
+.accent1 {
+    background-color: var(--darkGreen);
+}
+.accent1Text {
+    color: var(--darkGreen);
+}
+.accent2 {
+    background-color: var(--lightSeafoam);
+}
+.accent2Text {
+    color: var(--lightSeafoam);
+}
+.accent3Text {
+color: var(--mediumGreen);
+}
+.accent4 {
+    background-color: var(--cream);
+}
+a:link {
+    color: var(--darkGreen);
+}
+a:visited {
+    color: var(--mediumGreen);
+}
+.blog-posts {
+    border-radius: 10px;
+    border: var(--darkGreen) solid 3px;
+    background-image: linear-gradient(to right, var(--cream), var(--lightSeafoam));
+}
+.footerLink a:visited{
+    color: var(--cream);
+} 
+nav ul :hover {
+    background-color: var(--cream);
+    transition: background-color 1s;
+}

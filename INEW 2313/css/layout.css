@@ -5,12 +5,18 @@ body p, body h1{
      margin: 20px;
 }
 .blog-posts {
-     border: #261912 solid 3px;
      padding: 10px;
      margin-bottom: 20px;
 }
+.intro {
+     display: flex;
+}
+.introText {
+     width: 70%;
+}
 #michelle {
      width: 30%;
+     float: right;
      border-radius: 50%;
 }
 header {
@@ -25,7 +31,6 @@ header {
      display: flex;
      justify-content: space-between;
      align-items: center;
-     background-color: #77A690;
      padding: 10px;
    }
    nav ul {
@@ -40,7 +45,6 @@ header {
    }
    
    a {
-     color: #333;
      text-decoration: none;
      font-weight: bold;
      font-size: 18px;
