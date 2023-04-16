@@ -105,3 +105,28 @@ figcaption{
           margin: 10px;
      }
 }
+nav ul li:hover {
+     background-color: white;
+     transition: background-color 2s;
+}
+#michelle {
+     transform: rotate(.08turn);
+}
+
+header p {
+     animation-duration: 3s;
+     animation-name: slidein;
+   }
+   
+   @keyframes slidein {
+     from {
+       margin-left: 100%;
+       width: 300%;
+     }
+   
+     to {
+       margin-left: 0%;
+       width: 100%;
+     }
+   }
+   
