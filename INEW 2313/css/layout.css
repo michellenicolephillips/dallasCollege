@@ -43,6 +43,15 @@ header {
    nav ul li {
      margin-right: 20px;
    }
+   nav .styleThemes {
+     float: right;
+   }
+   #navy {
+     color: #091834;
+   }
+   #teal {
+     color: #23483C;
+   }
    
    a {
      text-decoration: none;

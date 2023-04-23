@@ -33,3 +33,8 @@ nav ul li:hover {
      background-color: var(--cream);
      transition: background-color 1s;
  }
+
+ .blog-posts {
+     border: var(--lightBlue) solid 3px;
+     background-image: linear-gradient(to right, var(--cream), var(--lime));
+ }

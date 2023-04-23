@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
+
+<head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
      <title>Michelle Phillips - Blog</title>
@@ -9,123 +10,209 @@
      <link rel="stylesheet" href="./css/products-grid.css" type="text/css">
      <link rel="stylesheet" href="css/fontawesome.css" type="text/css">
      <link rel="stylesheet" href="css/solid.css" type="text/css">
-     <link rel="stylesheet" href="css/monochromatic.css" type="text/css">
-   </head>
+     <link rel="stylesheet" href="css/analogous.css" type="text/css" id="color">
 
-   <body class="background">
+     <script>
+          function changeStyle(newStyle) {
+               document.getElementById('color').setAttribute('href', newStyle);
+          }
+          function showNavOptions() {
+               var x = document.getElementById("myTopNav");
+               if (x.className === "topNav") {
+                    x.className += " responsive";
+               } else {
+                    x.className = "topNav";
+               }
+          }
+     </script>
+</head>
+
+<body class="background">
      <header class="accent1 accent2Text">
           <img class="logo" src="./images/logo.png" alt="simple logo using white MP initials on a black ink spot">
-          <p>WELCOME!</p>
+          <p>Products</p>
      </header>
      <nav class="accent1Text accent2">
-          <ul>
+          <ul class="topNav" id="myTopNav">
+               <li class="icon">
+                    <a href="javascript:void(0);" onClick="showNavOptions()">
+                         <i class="fa fa-bars"></i>
+                    </a>
+               </li>
                <li><i class="fa-solid fa-house-chimney"></i> <a href="index.html">Home</a></li>
                <li><i class="fa-solid fa-note-sticky"></i><a href="blog.html">Blog</a></li>
                <li><i class="fa-solid fa-bag-shopping"></i><a href="products.html">Products</a></li>
 
           </ul>
+          <div class="styleThemes">
+               <button id="navy" onClick="changeStyle('css/analogous.css');">Navy & Lime</button>
+               <button id="teal" onClick="changeStyle('css/monochromatic.css');">Monochrome Teal</button>
+          </div>
      </nav>
      <main class="background">
           <article class="blog-posts">
                <h3 class="accent3Text">Using Selectors in CSS</h3>
                <div class="blog-text">
                     <p>
-                         Cascading Style Sheets, or CSS for short, is a great way to add color and style to your webpage.
-                         You can do an array of things such as setting font color, size, and style to designing a layout for how you want your webpage to look.
-                         Styling can be a tedious thing, but there's a way to make it less time consuming so you can focus more on your content!
+                         Cascading Style Sheets, or CSS for short, is a great way to add color and style to your
+                         webpage.
+                         You can do an array of things such as setting font color, size, and style to designing a layout
+                         for how you want your webpage to look.
+                         Styling can be a tedious thing, but there's a way to make it less time consuming so you can
+                         focus more on your content!
                     </p>
                     <p>
-                         To style a wepbage using CSS, we use something called "Selectors". Selectors are how we can tell what is being styled. 
-                         There are three main ways to use selectors. You can style your webpage based on <strong>element</strong> tags, <strong>class</strong> names, or <strong>IDs</strong>.
-                         If using an element tag, you could list the name of the element followed by a set of brackets. Inside the bracket, you would includw what style you want your elements to be.
-                         For example, if I used "h3 {font-color: blue; }", I would be specifying that I want all the h3 headers to be the color blue. 
-                         Class is another great way for grouping styling together. For example, if I created a pet adoption webpage and I wanted all the dog descriptions to have a green background
-                         and all the cat descriptions to have a blue background, I could use class names to group them. To do this, you would add "class="dog-descriptions" onto the elements with the dog descriptions.
-                         For cats, you would do the same, just name it "cat-descriptions." They both are written in the same element type but you don't want them to all be the same color so you use class to group them.
-                         Class is identified in a CSS file by the "." leading the classname. Ex: .dog-descriptions {background-color: green;}
+                         To style a wepbage using CSS, we use something called "Selectors". Selectors are how we can
+                         tell what is being styled.
+                         There are three main ways to use selectors. You can style your webpage based on
+                         <strong>element</strong> tags, <strong>class</strong> names, or <strong>IDs</strong>.
+                         If using an element tag, you could list the name of the element followed by a set of brackets.
+                         Inside the bracket, you would includw what style you want your elements to be.
+                         For example, if I used "h3 {font-color: blue; }", I would be specifying that I want all the h3
+                         headers to be the color blue.
+                         Class is another great way for grouping styling together. For example, if I created a pet
+                         adoption webpage and I wanted all the dog descriptions to have a green background
+                         and all the cat descriptions to have a blue background, I could use class names to group them.
+                         To do this, you would add "class="dog-descriptions" onto the elements with the dog
+                         descriptions.
+                         For cats, you would do the same, just name it "cat-descriptions." They both are written in the
+                         same element type but you don't want them to all be the same color so you use class to group
+                         them.
+                         Class is identified in a CSS file by the "." leading the classname. Ex: .dog-descriptions
+                         {background-color: green;}
                     </p>
                     <p>
-                         The third main way of setting styles for your webpage is using an ID selector. The ID selector is used by adding <strong>id="mission-statement"</strong>. 
-                         If we're  making a pet adoption website, I want the mission statement to stand out. However, it uses the same element as other parts of the webpage.
-                         To differentiate this, we use ID. We only want one thing to have different styling from the rest. To identify an ID selector, it would include a hash symbol before the element name.
-                         Ex: #mission-statement {font-size: 20px; color: red;} Using these different selectors will help you bring your webpage to life!
-                         For more on selectors, <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors" target="_blank">Mozilla</a> has some great docs to reference!
+                         The third main way of setting styles for your webpage is using an ID selector. The ID selector
+                         is used by adding <strong>id="mission-statement"</strong>.
+                         If we're making a pet adoption website, I want the mission statement to stand out. However, it
+                         uses the same element as other parts of the webpage.
+                         To differentiate this, we use ID. We only want one thing to have different styling from the
+                         rest. To identify an ID selector, it would include a hash symbol before the element name.
+                         Ex: #mission-statement {font-size: 20px; color: red;} Using these different selectors will help
+                         you bring your webpage to life!
+                         For more on selectors, <a
+                              href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors"
+                              target="_blank">Mozilla</a> has some great docs to reference!
                     </p>
                </div>
-              
-               <img class="blog-image" src="https://i2.wp.com/pediaa.com/wp-content/uploads/2018/08/Difference-Between-id-and-class-in-CSS-Comparison-Summary.jpg?resize=475%2C378" alt="chart comparing key differences between I.D. & class selectors">
+
+               <img class="blog-image"
+                    src="https://i2.wp.com/pediaa.com/wp-content/uploads/2018/08/Difference-Between-id-and-class-in-CSS-Comparison-Summary.jpg?resize=475%2C378"
+                    alt="chart comparing key differences between I.D. & class selectors">
           </article>
           <article class="blog-posts">
                <h3 class="accent3Text">Why Alts Are Important for Media Content</h3>
                <div class="blog-text">
                     <p>
-                         Using Alts in your webpage might not come naturally, but it's important to make sure they are used. So what are "Alts"? 
-                         Alts are an attribute added to html elements where <em>Alternate text</em> is used in case the element doesn't render on the page. This is most commonly used in media types such as images and videos.
+                         Using Alts in your webpage might not come naturally, but it's important to make sure they are
+                         used. So what are "Alts"?
+                         Alts are an attribute added to html elements where <em>Alternate text</em> is used in case the
+                         element doesn't render on the page. This is most commonly used in media types such as images
+                         and videos.
                     </p>
                     <p>
-                         Why are Alts important? The biggest importance is for making your webpage accessible! For visually impaired visitors of your webpage, they might be using a screen reader to read your content.
-                         Screen readers read the text on a screen but not the images. Including descriptive alertnate text ensures they get the full experience of your website.
-                         If you have an image that is necessary for a user to understand your content, you need to make sure all users can access it. For more information, visit <a href="https://www.w3docs.com/learn-html/html-alt-attribute.html" target="_blank" >W3 Docs</a>.
+                         Why are Alts important? The biggest importance is for making your webpage accessible! For
+                         visually impaired visitors of your webpage, they might be using a screen reader to read your
+                         content.
+                         Screen readers read the text on a screen but not the images. Including descriptive alertnate
+                         text ensures they get the full experience of your website.
+                         If you have an image that is necessary for a user to understand your content, you need to make
+                         sure all users can access it. For more information, visit <a
+                              href="https://www.w3docs.com/learn-html/html-alt-attribute.html" target="_blank">W3
+                              Docs</a>.
                     </p>
                </div>
 
                <p>
-                    <img class="blog-image" src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/alt-text-with-width-height.png" alt="an example image of alternate text showing on a page where an image has not rendered">
+                    <img class="blog-image"
+                         src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/alt-text-with-width-height.png"
+                         alt="an example image of alternate text showing on a page where an image has not rendered">
                </p>
           </article>
           <article class="blog-posts">
                <h3 class="accent3Text">The "HEAD" of Your Webpage</h3>
-               <img class="blog-image" src="https://www.tutorialstonight.com/assets/html/html-head.webp" alt="an example of a head element used in a webpage">
+               <img class="blog-image" src="https://www.tutorialstonight.com/assets/html/html-head.webp"
+                    alt="an example of a head element used in a webpage">
                <div class="blog-text">
                     <p>
-                         Including a "head" element for your webpage in very important. While it doesn't include any information that is visibly seen on your page, it supplies a lot of information to the internet about your webpage.
-                         The "head" tag is placed at the top your your html file before the body. It includes the "title" element. This title element is what is shown on the browser's title bar or the tab your user has open on their web browser.
-                         This title will also be what is displayed in search results when your webpage comes up in results which is why it is important to have a good title or the user might think your web page isn't relevant to what they've searched for.
+                         Including a "head" element for your webpage in very important. While it doesn't include any
+                         information that is visibly seen on your page, it supplies a lot of information to the internet
+                         about your webpage.
+                         The "head" tag is placed at the top your your html file before the body. It includes the
+                         "title" element. This title element is what is shown on the browser's title bar or the tab your
+                         user has open on their web browser.
+                         This title will also be what is displayed in search results when your webpage comes up in
+                         results which is why it is important to have a good title or the user might think your web page
+                         isn't relevant to what they've searched for.
                     </p>
                     <p>
-                         The "style" tag can be used to define the stylings for the single web page. This isn't necessary should you decide to use a css file to define your style. If using an external stylesheet instead of a style tag, a "link" tag is used.
+                         The "style" tag can be used to define the stylings for the single web page. This isn't
+                         necessary should you decide to use a css file to define your style. If using an external
+                         stylesheet instead of a style tag, a "link" tag is used.
                          The link tag will contain a link the source of your stylesheet.
                     </p>
                     <p>
-                         The "meta" tag will contain a lot more information for the internet to know what your page is. There are different attributes associated with the meta tag to provide different information to the internet.
-                         <em>name="keywords" content="blog, html, css, html heads"</em> help the internet know what keywords are associated with your website to better assist search engines with knowing your webpage.
-                         <em>name="description" content="This blog is about the different elements nested inside the head of a webpage and why they are important"</em> is the description that will display on the search results when your webpage comes up.
-                         There are other attributes associated with the meta tag that are useful. There are also other elements that can be contained in the "head" of a webpage. You can check thatm out at <a href="https://www.w3schools.com/html/html_head.asp">w3 Schools</a>.
+                         The "meta" tag will contain a lot more information for the internet to know what your page is.
+                         There are different attributes associated with the meta tag to provide different information to
+                         the internet.
+                         <em>name="keywords" content="blog, html, css, html heads"</em> help the internet know what
+                         keywords are associated with your website to better assist search engines with knowing your
+                         webpage.
+                         <em>name="description" content="This blog is about the different elements nested inside the
+                              head of a webpage and why they are important"</em> is the description that will display on
+                         the search results when your webpage comes up.
+                         There are other attributes associated with the meta tag that are useful. There are also other
+                         elements that can be contained in the "head" of a webpage. You can check thatm out at <a
+                              href="https://www.w3schools.com/html/html_head.asp">w3 Schools</a>.
                     </p>
                </div>
-               
+
           </article>
           <article class="blog-posts">
                <h3 class="accent3Text">Choosing A Color Palette</h3>
                <figure>
-                    <img class="blog-image" id="colorPalette" src="https://www.oberlo.com/media/1603954542-image14-2.png?w=1824&fit=max" alt="A color wheel showing the main colors and their complementary ones across from them">
+                    <img class="blog-image" id="colorPalette"
+                         src="https://www.oberlo.com/media/1603954542-image14-2.png?w=1824&fit=max"
+                         alt="A color wheel showing the main colors and their complementary ones across from them">
                     <figcaption>An example of a color palette</figcaption>
                </figure>
-              <div class="blog-text">
-               <p>
-                    Choosing the right colors for your website if important! There are a lot of options out there. Some important things to remember when choosing a color palette are:
-               </p>
-               <div>
-                    <ul>
-                         <li>Having high contrast</li>
-                         <li>Don't use too many colors</li>
-                         <li>Avoid using colors together that are hard to distinguish for the color blind</li>
-                    </ul>
+               <div class="blog-text">
+                    <p>
+                         Choosing the right colors for your website if important! There are a lot of options out there.
+                         Some important things to remember when choosing a color palette are:
+                    </p>
+                    <div>
+                         <ul>
+                              <li>Having high contrast</li>
+                              <li>Don't use too many colors</li>
+                              <li>Avoid using colors together that are hard to distinguish for the color blind</li>
+                         </ul>
+                    </div>
+                    <p>
+                         For high contrast, you don't want to use a light color on a light color or a dark color on a
+                         dark color. Using a yellow text with a white background can be hard to read. Choosing to use
+                         black text on a white background is a lot easier on the eyes.
+                         Avoid using too many colors to make your webpage look too busy. Try to stick to a theme of 3 -
+                         5 colors. There are a lot of resources out there to help choose a good color palette.
+                         Make sure you're aware of which colors are considered color blind colors. Red & green are two
+                         colors that are common color blind colors so using them together would make it hard for someone
+                         with color blindness to read.
+                         Don't forget to check the <a
+                              href="http://web-accessibility.carnegiemuseums.org/design/color/">Web Accessibility
+                              guidelines</a> to make sure your website is accessible by all! You can check out some
+                         color schemes <a href="https://www.w3schools.com/colors/colors_schemes.asp"
+                              target="_blank">here</a>!
+                    </p>
                </div>
-               <p>
-                    For high contrast, you don't want to use a light color on a light color or a dark color on a dark color. Using a yellow text with a white background can be hard to read. Choosing to use black text on a white background is a lot easier on the eyes.
-                    Avoid using too many colors to make your webpage look too busy. Try to stick to a theme of 3 - 5 colors. There are a lot of resources out there to help choose a good color palette.
-                    Make sure you're aware of which colors are considered color blind colors. Red & green are two colors that are common color blind colors so using them together would make it hard for someone with color blindness to read.
-                    Don't forget to check the <a href="http://web-accessibility.carnegiemuseums.org/design/color/">Web Accessibility guidelines</a> to make sure your website is accessible by all! You can check out some color schemes <a href="https://www.w3schools.com/colors/colors_schemes.asp" target="_blank">here</a>!
-               </p>
-              </div>
           </article>
      </main>
      <footer class="footer">
-          <a className="footerLink" href="https://www.dallascollege.edu/pages/default.aspx" target="_blank">https://www.dallascollege.edu/pages/default.aspx</a>
-          <address>123  Web Authoring Lane Dallas, TX 75244</address>
+          <a className="footerLink" href="https://www.dallascollege.edu/pages/default.aspx"
+               target="_blank">https://www.dallascollege.edu/pages/default.aspx</a>
+          <address>123 Web Authoring Lane Dallas, TX 75244</address>
           <a href="mailto:MPhillips@Student.DallasCollege.edu">Webmaster</a>
           &copy; Michelle Phillips
      </footer>
 </body>
+
 </html>
